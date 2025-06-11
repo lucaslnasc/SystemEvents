@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Evento {
-
   private int id;
   private String nome;
   private String descricao;
@@ -13,12 +12,15 @@ public class Evento {
   private String local;
   private int capacidade;
   private List<Palestrante> palestrantes;
+  private List<Participante> participantes;
 
   public Evento() {
     this.palestrantes = new ArrayList<>();
+    this.participantes = new ArrayList<>();
   }
 
   public Evento(String nome, String descricao, LocalDate data, String local, int capacidade) {
+    this();
     this.nome = nome;
     this.descricao = descricao;
     this.data = data;
@@ -82,8 +84,16 @@ public class Evento {
     this.palestrantes = palestrantes;
   }
 
+  public List<Participante> getParticipantes() {
+    return participantes;
+  }
+
+  public void setParticipantes(List<Participante> participantes) {
+    this.participantes = participantes;
+  }
+
   @Override
   public String toString() {
-    return nome + " - " + descricao + " - " + " - " + local;
+    return nome + " - " + descricao + " - " + local;
   }
 }

@@ -50,6 +50,6 @@ public class Participante {
 
   @Override
   public String toString() {
-    return nome + " - " + email + " - " + cpf;
+    return nome + " - " + email;
   }
 }
